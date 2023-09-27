@@ -173,17 +173,17 @@ Create links for them:
 
 ```html
 <nav>
-    <ul>
-        <li>
-            <Link to="/">Home</Link>
-        </li>
-        <li>
-            <Link to="/about">About</Link>
-        </li>
-        <li>
-            <Link to="/pokemon">Pokemon</Link>
-        </li>
-    </ul>
+	<ul>
+		<li>
+			<Link to="/">Home</Link>
+		</li>
+		<li>
+			<Link to="/about">About</Link>
+		</li>
+		<li>
+			<Link to="/pokemon">Pokemon</Link>
+		</li>
+	</ul>
 </nav>
 ```
 
@@ -218,7 +218,7 @@ We can additionally add a `<Link>` to our `<nav>` that has its `to` prop set to 
 
 ```html
 <li>
-    <Link to="/feed-me-a-stray-cat">This is a broken link</Link>
+	<Link to="/feed-me-a-stray-cat">This is a broken link</Link>
 </li>
 ```
 
@@ -261,10 +261,10 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
 
 ```javascript
 {pokemon.results.map((currentPokemon, index) => {
-    return <li key={currentPokemon.name}>
-        <Link to={"/pokemon/" + index}>
-            {currentPokemon.name}
-        </Link>
-    </li>
+	return <li key={currentPokemon.name}>
+		<Link to={"/pokemon/" + index}>
+			{currentPokemon.name}
+		</Link>
+	</li>
 })}
 ```

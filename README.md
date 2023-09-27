@@ -11,12 +11,11 @@
 
 ## Setup
 
-Go into starter_code, install dependencies, and get the app running:
+Go into starter_code, install dependencies:
 
 ```
 cd starter_code
 npm i
-npm start
 ```
 
 This should display a bunch of Pokemon on the page
@@ -44,11 +43,17 @@ Surround `<App />` with `<BrowserRouter>` in `index.js` so that the `<App />` co
 </BrowserRouter>
 ```
 
+Now, let's start up the server:
+
+```js
+npm run start
+```
+
 ## Set Up Routes
  
 In `App.js` Let's move the list of Pokemon into its own component:
 
-```javascript
+```js
 function App() {
 	return (
 		<>

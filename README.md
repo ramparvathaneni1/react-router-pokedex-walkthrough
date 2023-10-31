@@ -229,7 +229,7 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 Now let's set up a `<Route>`:
 
 ```js
-<Route path="/pokemon/:id" element="{<SinglePokemon" />} />
+<Route path="/pokemon/:id" element={<SinglePokemon />} />
 ```
 
 Note the `:id` in the `path` prop. We can access anything that's passed into the second segment of that path with the `useParams` that we just imported:
@@ -262,7 +262,7 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
       <li key={currentPokemon.name}>
         <Link to={"/pokemon/" + index}>{currentPokemon.name}</Link>
       </li>
-    );
-  });
+    )
+  })
 }
 ```

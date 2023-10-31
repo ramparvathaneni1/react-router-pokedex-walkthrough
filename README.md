@@ -3,11 +3,11 @@
 ## Lesson Objects
 
 1. Describe the point of React Router
-1. Install React Router
-1. Set Up Routes
-1. Create Links
-1. Create a 404 Page
-1. Use URL Params
+2. Install React Router
+3. Set Up Routes
+4. Create Links
+5. Create a 404 Page
+6. Use URL Params
 
 ## Setup
 
@@ -75,6 +75,8 @@ function Pokemon() {
     </>
   );
 }
+
+export default App;
 ```
 
 At the top, import the `Routes` and `Route` properties of React Router:
@@ -159,9 +161,9 @@ Set up routes for them:
 
 ```html
 <Routes>
-  <Route path="/" element="{<Home" />} />
-  <Route path="/about" element="{<About" />} />
-  <Route path="/pokemon" element="{<Pokemon" />} />
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/pokemon" element={<Pokemon />} />
 </Routes>
 ```
 
@@ -205,7 +207,7 @@ function NoMatch() {
 Now when we create `<Route>` component for it, we simply set `path="*"`:
 
 ```html
-<Route path="*" element="{<NoMatch" />} />
+<Route path="*" element={<NoMatch />} />
 ```
 
 Now if we change the path to anything that doesn't have an exact match (e.g. `/feed-me-a-stray-cat`), our `<NoMatch>` will be loaded.
@@ -229,7 +231,7 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 Now let's set up a `<Route>`:
 
 ```js
-<Route path="/pokemon/:id" element="{<SinglePokemon" />} />
+<Route path="/pokemon/:id" element={<SinglePokemon />} />
 ```
 
 Note the `:id` in the `path` prop. We can access anything that's passed into the second segment of that path with the `useParams` that we just imported:

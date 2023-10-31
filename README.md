@@ -159,9 +159,9 @@ Set up routes for them:
 
 ```html
 <Routes>
-  <Route path="/" element="{<Home" />} />
-  <Route path="/about" element="{<About" />} />
-  <Route path="/pokemon" element="{<Pokemon" />} />
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/pokemon" element={<Pokemon />} />
 </Routes>
 ```
 
@@ -205,7 +205,7 @@ function NoMatch() {
 Now when we create `<Route>` component for it, we simply set `path="*"`:
 
 ```html
-<Route path="*" element="{<NoMatch" />} />
+<Route path="*" element={<NoMatch />} />
 ```
 
 Now if we change the path to anything that doesn't have an exact match (e.g. `/feed-me-a-stray-cat`), our `<NoMatch>` will be loaded.

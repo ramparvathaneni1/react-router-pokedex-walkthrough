@@ -22,6 +22,8 @@ This should display a bunch of Pokemon on the page
 
 ## Install React Router
 
+[React Router Docs](https://reactrouter.com/en/main)
+
 Simply install the package:
 
 ```bash
@@ -251,7 +253,7 @@ function SinglePokemon() {
 }
 ```
 
-Now when we change the URL's path to something like `/pokemon/0` we can view additional details abouta pokemon.
+Now when we change the URL's path to something like `/pokemon/0` we can view additional details about a pokemon.
 
 Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` path:
 

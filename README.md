@@ -269,4 +269,4 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
 }
 ```
 ## Hungry For More?
-Since we have so much code within a single file, let's refactor our app by creating a file for each component in the `/src` directory. Don't forget to import your new components into your `App.js`!
+Since we have so much code within our `App.js`, let's refactor our app by creating a file for each component in the `/src` directory. Don't forget to import your new components into your `App.js`!

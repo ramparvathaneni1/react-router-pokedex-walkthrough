@@ -255,7 +255,7 @@ function SinglePokemon() {
 
 Now when we change the URL's path to something like `/pokemon/0` we can view additional details about a pokemon.
 
-Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` path:
+Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` path. Put this inside the `return` function:
 
 ```js
 {

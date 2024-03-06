@@ -1,6 +1,5 @@
 import pokemon, { pokemonDetails } from "./pokemon.js";
-import { Routes, Route, Link, useParams } from "react-router-dom";
-
+import { Routes, Route, Link, useParams } from "react-router-dom"; //
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           </li>
         </ul>
       </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -30,7 +28,6 @@ function App() {
         <Route path="/pokemon/:id" element={<SinglePokemon />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
-
     </>
   );
 }
@@ -41,9 +38,11 @@ function Pokemon() {
       <h2>Pokemon</h2>
       <ul>
         {pokemon.results.map((currentPokemon, index) => {
-          return <li key={currentPokemon.name}>
-            <Link to={"/pokemon/" + index}>{currentPokemon.name}</Link>
-          </li>;
+          return (
+            <li key={currentPokemon.name}>
+              <Link to={"/pokemon/" + index}>{currentPokemon.name}</Link>
+            </li>
+          );
         })}
       </ul>
     </>
@@ -60,6 +59,13 @@ function SinglePokemon() {
         <dd>{pokemonDetails[id].weight}</dd>
         <dt>Height:</dt>
         <dd>{pokemonDetails[id].height}</dd>
+        <dt>Picture:</dt>
+        <dd>
+          <img
+            src={pokemonDetails[id].sprites.front_default}
+            alt="pokemon"
+          ></img>
+        </dd>
       </dl>
     </>
   );

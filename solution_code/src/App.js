@@ -59,6 +59,16 @@ function SinglePokemon() {
         <dd>{pokemonDetails[id].weight}</dd>
         <dt>Height:</dt>
         <dd>{pokemonDetails[id].height}</dd>
+        <dt>Abilities:</dt>
+        <dd>
+          {pokemonDetails[id].abilities.map((currentAbility, index) => {
+            return (
+              <li key={currentAbility.ability.name}>
+                {currentAbility.ability.name}
+              </li>
+            );
+          })}
+        </dd>
         <dt>Picture:</dt>
         <dd>
           <img

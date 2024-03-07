@@ -22,6 +22,8 @@ This should display a bunch of Pokemon on the page
 
 ## Install React Router
 
+[React Router Docs](https://reactrouter.com/en/main)
+
 Simply install the package:
 
 ```bash
@@ -106,9 +108,9 @@ If we change the URL in our browser to `http://localhost:3000/pokemon` we should
 
 ## Create Links
 
-In the last section, we changed the URL of the app, and it appeared (at least to the user) as though we'd visited a brand new web page. In reality, this just ran some javascript. We didn't actualy view a brand new page. But we had to manually change the URL in the browser's navigation bar. That's clearly not a good user experience. We want the user to have links that they can click on. Those links will take the user to those other aspects of the application.
+In the last section, we changed the URL of the app, and it appeared (at least to the user) as though we'd visited a brand new web page. In reality, this just ran some javascript. We didn't actually view a brand new page. But we had to manually change the URL in the browser's navigation bar. That's clearly not a good user experience. We want the user to have links that they can click on. Those links will take the user to those other aspects of the application.
 
-Let's first create a place for our navigation inside the `App()` component declaration:
+Let's first create a place for our navigation inside the return function of your `App()` component declaration:
 
 ```html
 <h1>Pokemon!</h1>
@@ -125,13 +127,13 @@ Now let's import `Link` from the `react-router-dom` package. `Link` is the React
 import { Routes, Route, Link } from "react-router-dom";
 ```
 
-Now that it's accessable to us, let's incorporate the component into the HTML:
+Now that it's accessible to us, let's incorporate the component into the `<li>` HTML element:
 
 ```html
 <Link to="/pokemon">Pokemon</Link>
 ```
 
-Now if we change the path of the URL of the app back to `/` and click the `Pokemon` link, we should see that the `<Pokemon>` component has loaded
+Now if we change the path of the URL of the app back to `/` and click the `Pokemon` link, we should see that the `<Pokemon>` component has loaded.
 
 ## Add Additional Links
 
@@ -253,9 +255,9 @@ function SinglePokemon() {
 }
 ```
 
-Now when we change the URL's path to something like `/pokemon/0` we can view additional details abouta pokemon.
+Now when we change the URL's path to something like `/pokemon/0` we can view additional details about a pokemon.
 
-Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` path:
+Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` path. Put this inside the `return` function:
 
 ```js
 {
@@ -264,9 +266,14 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
       <li key={currentPokemon.name}>
         <Link to={"/pokemon/" + index}>{currentPokemon.name}</Link>
       </li>
-    );
-  });
+    )
+  })
 }
 ```
+
+## Stretch Goal
+
+In your `SinglePokemon` function, add a picture of the Pokemon and a list of its abilities.
+
 ## Hungry For More?
 Since we have so much code within our `App.js`, let's refactor our app by creating a file for each component in the `/src` directory. Don't forget to import your new components into your `App.js`!

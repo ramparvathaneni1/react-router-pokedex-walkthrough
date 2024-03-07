@@ -3,11 +3,11 @@
 ## Lesson Objects
 
 1. Describe the point of React Router
-1. Install React Router
-1. Set Up Routes
-1. Create Links
-1. Create a 404 Page
-1. Use URL Params
+2. Install React Router
+3. Set Up Routes
+4. Create Links
+5. Create a 404 Page
+6. Use URL Params
 
 ## Setup
 
@@ -77,6 +77,8 @@ function Pokemon() {
     </>
   );
 }
+
+export default App;
 ```
 
 At the top, import the `Routes` and `Route` properties of React Router:
@@ -272,3 +274,6 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
 ## Stretch Goal
 
 In your `SinglePokemon` function, add a picture of the Pokemon and a list of its abilities.
+
+## Hungry For More?
+Since we have so much code within our `App.js`, let's refactor our app by creating a file for each component in the `/src` directory. Don't forget to import your new components into your `App.js`!

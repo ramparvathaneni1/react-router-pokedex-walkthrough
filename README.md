@@ -268,3 +268,7 @@ Let's set up some links in the `<Pokemon>` component to our new `/pokemon/:id` p
   })
 }
 ```
+
+## Stretch Goal
+
+In your `SinglePokemon` function, add a picture of the Pokemon and a list of its abilities.
